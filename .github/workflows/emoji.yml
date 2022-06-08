@@ -4,6 +4,7 @@ jobs:
   build:
     name: Check emoji shortcode
     runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v2
       - run: |
           if LC_ALL=C grep -R '[^ -~]' *.md; then
